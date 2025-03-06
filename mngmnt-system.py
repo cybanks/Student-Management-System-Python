@@ -34,15 +34,15 @@ class StudentManagementSystem:
         self.entry_age.pack()
         
         # Buttons
-        self.button_add = tk.Button(root, text="Add Student", bg="#333", fg="white", activebackground="#555", activeforeground="white")
+        self.button_add = tk.Button(root, text="Add Student", command=self.add_student, bg="#444", fg=self.text_color)
         self.button_add.pack(pady=5)
         
-        self.button_view = tk.Button(root, text="View Students", bg="#333", fg="white", activebackground="#555", activeforeground="white")
+        self.button_view = tk.Button(root, text="View Students", command=self.view_students, bg="#444", fg=self.text_color)
         self.button_view.pack(pady=5)
-
-        self.button_exit = tk.Button(root, text="Exit", bg="#333", fg="white", activebackground="#555", activeforeground="white")
+        
+        self.button_exit = tk.Button(root, text="Exit", command=root.quit, bg="#ff5555", fg=self.text_color)
         self.button_exit.pack(pady=5)
-
+    
     def add_student(self):
         """Function to add a student to the list"""
         name = self.entry_name.get()
